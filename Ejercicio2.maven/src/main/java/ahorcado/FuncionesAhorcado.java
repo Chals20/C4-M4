@@ -1,5 +1,7 @@
 package ahorcado;
 
+import javax.swing.JOptionPane;
+
 public class FuncionesAhorcado {
 
 	final private String[] palabras = { "piña", "hola", "lija", "cerdo", "pugil", "queso", "muerta", "liston",
@@ -7,6 +9,8 @@ public class FuncionesAhorcado {
 	private int intentos;
 	private int vidas;
 	private String palabraSec;
+	private int contadorPalabrasAcertadas = 0;
+	private boolean palabraacertada = false;
 
 	public FuncionesAhorcado() {
 
@@ -34,6 +38,14 @@ public class FuncionesAhorcado {
 		this.vidas = vidas;
 	}
 
+	public boolean getPalabraacertada() {
+		return palabraacertada;
+	}
+
+	public void setPalabraacertada(boolean palabraacertada) {
+		this.palabraacertada = palabraacertada;
+	}
+
 	public String[] getPalabras() {
 		return palabras;
 	}
@@ -47,6 +59,7 @@ public class FuncionesAhorcado {
 	public String contieneLetra(String letra, String palabraSecreta, String palabraLabel) {
 		String nuevaPalabraCodificada = "";
 		boolean contieneLetra = false;
+		boolean palabraresuelta = false;
 		for (int i = 0; i < palabraSecreta.length(); i++) {
 			// MANZANA Letra: M
 			// M ----- M_ ----- M__
@@ -61,6 +74,19 @@ public class FuncionesAhorcado {
 		}
 		if (!contieneLetra){
 			this.intentos = (this.intentos-1);
+			
+			// cambiarImagenAhorcado()
+			
+		}
+		
+		if (!nuevaPalabraCodificada.contains("*")){ //Si la palbra del label NO contiene "*" Has ganado.
+			System.out.println("Palabra completada");
+			this.intentos = 10;
+			this.palabraacertada = true;
+			// Set Imagen ahorcado a la primera
+			// nueva palabraSecreta
+			// Botones enable
+			contadorPalabrasAcertadas++;
 		}
 		return nuevaPalabraCodificada;
 	}
@@ -71,6 +97,18 @@ public class FuncionesAhorcado {
 			label = label + "*";
 		}
 		return label;
+	}
+
+	public void ComprobarIntentos() {
+		System.out.println(this.intentos);
+		if (this.intentos == 0) {
+			JOptionPane.showMessageDialog(null, "Se acabaron los intentos");
+			//QuitarVida() //Nueva palabra. //ShowMessage La palabra era: XXXXX
+		}
+	}
+	
+	public void enableBotones() {
+		
 	}
 
 }
