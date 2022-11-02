@@ -232,27 +232,178 @@ public class Ahorcado extends JFrame {
 
 			}
 		});
+		
+		btnC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnC);
+
+			}
+		});
+		
+		btnD.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnD);
+
+			}
+		});
+		
 		btnE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnE);
 
 			}
 		});
+		
+		btnF.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnF);
+
+			}
+		});
+		
+		btnG.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnG);
+
+			}
+		});
+		
+		btnH.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnH);
+
+			}
+		});
+		
 		btnI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnI);
 
 			}
 		});
+		
+		btnJ.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnJ);
+
+			}
+		});
+		
+		btnK.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnK);
+
+			}
+		});
+		
+		btnL.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnL);
+
+			}
+		});
+		
+		btnM.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnM);
+
+			}
+		});
+		
+		btnN.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnN);
+
+			}
+		});
+		
+		btnNY.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnNY);
+
+			}
+		});
+		
 		btnO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnO);
 
 			}
 		});
+		
+		btnP.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnP);
+
+			}
+		});
+		
+		btnQ.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnQ);
+
+			}
+		});
+		
+		btnR.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnR);
+
+			}
+		});
+		
+		btnS.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnS);
+
+			}
+		});
+		
+		btnT.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnT);
+
+			}
+		});
+		
 		btnU.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnU);
+
+			}
+		});
+		
+		btnV.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnV);
+
+			}
+		});
+		
+		btnW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnW);
+
+			}
+		});
+		
+		btnX.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnX);
+
+			}
+		});
+		
+		btnY.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnY);
+
+			}
+		});
+		
+		btnZ.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnZ);
 
 			}
 		});
