@@ -1,5 +1,6 @@
 package ahorcado;
 
+import java.awt.Button;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -17,11 +18,13 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JToggleButton;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Ahorcado extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textField_PalabraSecreta;
 
 	/**
 	 * Launch the application.
@@ -89,11 +92,11 @@ public class Ahorcado extends JFrame {
 		lblPalabraSecreta.setBounds(23, 216, 144, 25);
 		contentPane.add(lblPalabraSecreta);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(26, 238, 242, 41);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textField_PalabraSecreta = new JTextField();
+		textField_PalabraSecreta.setEditable(false);
+		textField_PalabraSecreta.setBounds(26, 238, 242, 41);
+		contentPane.add(textField_PalabraSecreta);
+		textField_PalabraSecreta.setColumns(10);
 		
 		JLabel lblTeclado = new JLabel("Teclado");
 		lblTeclado.setBounds(23, 338, 70, 15);
@@ -211,5 +214,26 @@ public class Ahorcado extends JFrame {
 		tglbtnNewToggleButton_5.setEnabled(false);
 		tglbtnNewToggleButton_5.setBounds(384, 31, 343, 516);
 		contentPane.add(tglbtnNewToggleButton_5);
+		
+		
+		
+		btnA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnA, btnA.getText());
+			}
+		});
+		
+		btnB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnB, btnB.getText());
+
+			}
+		});
 	}
+	
+	public void accionBoton(JButton boton1, String letra) {
+		boton1.setText("Prueba");
+	}
+	
+	
 }
