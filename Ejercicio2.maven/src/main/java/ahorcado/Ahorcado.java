@@ -17,6 +17,7 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -27,6 +28,13 @@ public class Ahorcado extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_PalabraSecreta;
 	FuncionesAhorcado aux = new FuncionesAhorcado();
+	
+	private JButton btnA = new JButton("A");
+	private JButton btnB = new JButton("B");
+	private JButton btnC = new JButton("C");
+
+
+
 
 	/**
 	 * Launch the application.
@@ -98,22 +106,18 @@ public class Ahorcado extends JFrame {
 		textField_PalabraSecreta.setEditable(false);
 		textField_PalabraSecreta.setBounds(26, 238, 242, 41);
 		contentPane.add(textField_PalabraSecreta);
-		textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
 		textField_PalabraSecreta.setColumns(10);
 
 		JLabel lblTeclado = new JLabel("Teclado");
 		lblTeclado.setBounds(23, 338, 70, 15);
 		contentPane.add(lblTeclado);
 
-		JButton btnA = new JButton("A");
 		btnA.setBounds(23, 365, 49, 35);
 		contentPane.add(btnA);
 
-		JButton btnB = new JButton("B");
 		btnB.setBounds(77, 365, 49, 35);
 		contentPane.add(btnB);
 
-		JButton btnC = new JButton("C");
 		btnC.setBounds(132, 365, 49, 35);
 		contentPane.add(btnC);
 
@@ -213,7 +217,6 @@ public class Ahorcado extends JFrame {
 		btnZ.setBounds(77, 559, 49, 35);
 		contentPane.add(btnZ);
 
-		JButton bt1 = btnA, bt2 = btnB, bt3 = btnC;
 
 		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("");
 		tglbtnNewToggleButton_5.setEnabled(false);
@@ -517,6 +520,31 @@ public class Ahorcado extends JFrame {
 
 			}
 		});
+		
+		btnIniciarJuego.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				FuncionesAhorcado newGame = new FuncionesAhorcado();
+				textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
+				activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
+						btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+
+				
+			}
+		});
+		
+		btnResolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (aux.getVidas() > 1) {
+				aux.resolver();
+				activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
+						btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+				
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "No te quedan vidas");
+				}
+			}
+		});
 	}
 
 	public void accionBoton(JButton boton1) {
@@ -524,8 +552,15 @@ public class Ahorcado extends JFrame {
 				textField_PalabraSecreta.getText());
 		textField_PalabraSecreta.setText(nuevaPalabra);
 		boton1.setEnabled(false);
-		aux.ComprobarIntentos();
+		if (aux.ComprobarIntentos()) {
+			textField_PalabraSecreta.setText(aux.nuevaVida());
+			activarBotonesLetras(btnA, btnB, btnC);
+			//activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
+			//		btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+		}
 	}
+	
+	
 
 	//Activa los botones de las letras.
 	private void activarBotonesLetras(JButton btnA, JButton btnB, JButton btnC, JButton btnD, JButton btnE,

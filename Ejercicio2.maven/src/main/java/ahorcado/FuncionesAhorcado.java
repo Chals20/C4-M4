@@ -16,9 +16,14 @@ public class FuncionesAhorcado {
 
 		// generamos aleatoriamente la palabra a adivinar
 		int i = (int) Math.floor(Math.random() * (palabras.length));
-		palabraSec = palabras[i].toUpperCase();
-		vidas = 5;
-		intentos = 10;
+		this.palabraSec = palabras[i].toUpperCase();
+		this.vidas = 5;
+		this.intentos = 10;
+	}
+
+	public void nuevaPalabraSecreta() {
+		int i = (int) Math.floor(Math.random() * (palabras.length));
+		this.palabraSec = palabras[i].toUpperCase();
 	}
 
 	// Getters y setters
@@ -68,18 +73,18 @@ public class FuncionesAhorcado {
 				nuevaPalabraCodificada = nuevaPalabraCodificada + letra;
 			} else if (palabraLabel.charAt(i) != '*') { // Letra acertada en jugada anterior, para no sobreescribirla
 				nuevaPalabraCodificada = nuevaPalabraCodificada + palabraSecreta.charAt(i);
-			} else { //Letra no correcta
+			} else { // Letra no correcta
 				nuevaPalabraCodificada = nuevaPalabraCodificada + "*";
 			}
 		}
-		if (!contieneLetra){
-			this.intentos = (this.intentos-1);
-			
+		if (!contieneLetra) {
+			this.intentos = (this.intentos - 1);
+
 			// cambiarImagenAhorcado()
-			
+
 		}
-		
-		if (!nuevaPalabraCodificada.contains("*")){ //Si la palbra del label NO contiene "*" Has ganado.
+
+		if (!nuevaPalabraCodificada.contains("*")) { // Si la palbra del label NO contiene "*" Has ganado.
 			System.out.println("Palabra completada");
 			this.intentos = 10;
 			this.palabraacertada = true;
@@ -99,16 +104,30 @@ public class FuncionesAhorcado {
 		return label;
 	}
 
-	public void ComprobarIntentos() {
+	public boolean ComprobarIntentos() {
 		System.out.println(this.intentos);
 		if (this.intentos == 0) {
-			JOptionPane.showMessageDialog(null, "Se acabaron los intentos");
-			//QuitarVida() //Nueva palabra. //ShowMessage La palabra era: XXXXX
+			return true;
+		} else {
+			return false;
 		}
 	}
-	
-	public void enableBotones() {
-		
+
+	public String nuevaVida() {
+		JOptionPane.showMessageDialog(null, "Se acabaron los intentos");
+		setVidas(getVidas() - 1);
+		System.out.println("La palabra secreta era: " + getPalabraSec());
+		nuevaPalabraSecreta();
+		setIntentos(10);
+		System.out.println("La palabra secreta nueva es: " + getPalabraSec());
+		return iniciarLabelSecreta();
+
+	}
+
+	public void resolver() {
+		JOptionPane.showMessageDialog(null, "La palabra secreta era: " + getPalabraSec());
+		this.vidas = this.vidas - 1;
+		this.intentos = 10;
 	}
 
 }
