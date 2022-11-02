@@ -25,6 +25,8 @@ public class Ahorcado extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_PalabraSecreta;
+	FuncionesAhorcado aux = new FuncionesAhorcado();
+
 
 	/**
 	 * Launch the application.
@@ -96,6 +98,7 @@ public class Ahorcado extends JFrame {
 		textField_PalabraSecreta.setEditable(false);
 		textField_PalabraSecreta.setBounds(26, 238, 242, 41);
 		contentPane.add(textField_PalabraSecreta);
+		textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
 		textField_PalabraSecreta.setColumns(10);
 		
 		JLabel lblTeclado = new JLabel("Teclado");
@@ -219,21 +222,50 @@ public class Ahorcado extends JFrame {
 		
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnA, btnA.getText());
+				accionBoton(btnA);
 			}
 		});
 		
 		btnB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnB, btnB.getText());
+				accionBoton(btnB);
+
+			}
+		});
+		btnE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnE);
+
+			}
+		});
+		btnI.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnI);
+
+			}
+		});
+		btnO.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnO);
+
+			}
+		});
+		btnU.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				accionBoton(btnU);
 
 			}
 		});
 	}
 	
-	public void accionBoton(JButton boton1, String letra) {
-		boton1.setText("Prueba");
+	public void accionBoton(JButton boton1) {
+		String nuevaPalabra = aux.contieneLetra(boton1.getText(), aux.getPalabraSec(), textField_PalabraSecreta.getText());
+		textField_PalabraSecreta.setText(nuevaPalabra);
+		boton1.setEnabled(false);
+		//ComprobarIntentos();
 	}
+	
+	
 	
 	
 }
