@@ -32,6 +32,30 @@ public class Ahorcado extends JFrame {
 	private JButton btnA = new JButton("A");
 	private JButton btnB = new JButton("B");
 	private JButton btnC = new JButton("C");
+	private JButton btnD = new JButton("D");
+	private JButton btnE = new JButton("E");
+	private JButton btnF = new JButton("F");
+	private JButton btnG = new JButton("G");
+	private JButton btnH = new JButton("H");
+	private JButton btnI = new JButton("I");
+	private JButton btnJ = new JButton("J");
+	private JButton btnK = new JButton("K");
+	private JButton btnL = new JButton("L");
+	private JButton btnM = new JButton("M");
+	private JButton btnN = new JButton("N");
+	private JButton btnNY = new JButton("Ñ");
+	private JButton btnO = new JButton("O");
+	private JButton btnP = new JButton("P");
+	private JButton btnQ = new JButton("Q");
+	private JButton btnR = new JButton("R");
+	private JButton btnS = new JButton("S");
+	private JButton btnT = new JButton("T");
+	private JButton btnU = new JButton("U");
+	private JButton btnV = new JButton("V");
+	private JButton btnW = new JButton("W");
+	private JButton btnX = new JButton("X");
+	private JButton btnY = new JButton("Y");
+	private JButton btnZ = new JButton("Z");
 
 
 
@@ -111,111 +135,115 @@ public class Ahorcado extends JFrame {
 		JLabel lblTeclado = new JLabel("Teclado");
 		lblTeclado.setBounds(23, 338, 70, 15);
 		contentPane.add(lblTeclado);
+		
 
 		btnA.setBounds(23, 365, 49, 35);
 		contentPane.add(btnA);
-
+		btnA.setEnabled(false);
+		
 		btnB.setBounds(77, 365, 49, 35);
 		contentPane.add(btnB);
+		btnB.setEnabled(false);
 
 		btnC.setBounds(132, 365, 49, 35);
 		contentPane.add(btnC);
-
-		JButton btnD = new JButton("D");
+		btnC.setEnabled(false);
+	
 		btnD.setBounds(193, 365, 49, 35);
 		contentPane.add(btnD);
+		btnD.setEnabled(false);
 
-		JButton btnE = new JButton("E");
 		btnE.setBounds(248, 365, 49, 35);
 		contentPane.add(btnE);
+		btnE.setEnabled(false);
 
-		JButton btnF = new JButton("F");
 		btnF.setBounds(23, 402, 49, 35);
 		contentPane.add(btnF);
+		btnF.setEnabled(false);
 
-		JButton btnG = new JButton("G");
 		btnG.setBounds(77, 402, 49, 35);
 		contentPane.add(btnG);
+		btnG.setEnabled(false);
 
-		JButton btnH = new JButton("H");
 		btnH.setBounds(132, 402, 49, 35);
 		contentPane.add(btnH);
+		btnH.setEnabled(false);
 
-		JButton btnI = new JButton("I");
 		btnI.setBounds(193, 402, 49, 35);
 		contentPane.add(btnI);
+		btnI.setEnabled(false);
 
-		JButton btnJ = new JButton("J");
 		btnJ.setBounds(248, 402, 49, 35);
 		contentPane.add(btnJ);
+		btnJ.setEnabled(false);
 
-		JButton btnK = new JButton("K");
 		btnK.setBounds(23, 436, 49, 35);
 		contentPane.add(btnK);
+		btnK.setEnabled(false);
 
-		JButton btnL = new JButton("L");
 		btnL.setBounds(77, 436, 49, 35);
 		contentPane.add(btnL);
+		btnL.setEnabled(false);
 
-		JButton btnM = new JButton("M");
 		btnM.setBounds(132, 436, 49, 35);
 		contentPane.add(btnM);
+		btnM.setEnabled(false);
 
-		JButton btnN = new JButton("N");
 		btnN.setBounds(193, 441, 49, 35);
 		contentPane.add(btnN);
+		btnN.setEnabled(false);
 
-		JButton btnNY = new JButton("Ñ");
 		btnNY.setBounds(248, 441, 49, 35);
 		contentPane.add(btnNY);
+		btnNY.setEnabled(false);
 
-		JButton btnO = new JButton("O");
 		btnO.setBounds(23, 465, 49, 35);
 		contentPane.add(btnO);
+		btnO.setEnabled(false);
 
-		JButton btnP = new JButton("P");
 		btnP.setBounds(77, 470, 49, 35);
 		contentPane.add(btnP);
+		btnP.setEnabled(false);
 
-		JButton btnQ = new JButton("Q");
 		btnQ.setBounds(132, 470, 49, 35);
 		contentPane.add(btnQ);
+		btnQ.setEnabled(false);
 
-		JButton btnR = new JButton("R");
 		btnR.setBounds(193, 470, 49, 35);
 		contentPane.add(btnR);
+		btnR.setEnabled(false);
 
-		JButton btnS = new JButton("S");
 		btnS.setBounds(248, 470, 49, 35);
 		contentPane.add(btnS);
+		btnS.setEnabled(false);
 
-		JButton btnT = new JButton("T");
 		btnT.setBounds(23, 512, 49, 35);
 		contentPane.add(btnT);
+		btnT.setEnabled(false);
 
-		JButton btnU = new JButton("U");
 		btnU.setBounds(77, 512, 49, 35);
 		contentPane.add(btnU);
+		btnU.setEnabled(false);
 
-		JButton btnV = new JButton("V");
 		btnV.setBounds(132, 512, 49, 35);
 		contentPane.add(btnV);
+		btnV.setEnabled(false);
 
-		JButton btnW = new JButton("W");
 		btnW.setBounds(193, 512, 49, 35);
 		contentPane.add(btnW);
+		btnW.setEnabled(false);
 
-		JButton btnX = new JButton("X");
 		btnX.setBounds(248, 512, 49, 35);
 		contentPane.add(btnX);
+		btnX.setEnabled(false);
 
-		JButton btnY = new JButton("Y");
 		btnY.setBounds(23, 559, 49, 35);
 		contentPane.add(btnY);
+		btnY.setEnabled(false);
 
-		JButton btnZ = new JButton("Z");
 		btnZ.setBounds(77, 559, 49, 35);
 		contentPane.add(btnZ);
+		btnZ.setEnabled(false);
 
 
 		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("");
@@ -227,8 +255,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnA);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 			}
 
@@ -239,8 +266,7 @@ public class Ahorcado extends JFrame {
 				System.out.println(aux.getPalabraSec());
 				accionBoton(btnB);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -250,8 +276,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnC);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -261,8 +286,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnD);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -272,8 +296,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnE);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -283,8 +306,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnF);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -294,8 +316,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnG);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -305,8 +326,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnH);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -316,8 +336,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnI);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -327,8 +346,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnJ);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -338,8 +356,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnK);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -349,8 +366,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnL);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -360,8 +376,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnM);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -371,8 +386,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnN);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -382,8 +396,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnNY);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -393,8 +406,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnO);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -404,8 +416,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnP);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -415,8 +426,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnQ);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -426,8 +436,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnR);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -437,8 +446,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnS);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -448,8 +456,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnT);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -459,8 +466,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnU);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -470,8 +476,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnV);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -481,8 +486,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnW);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -492,8 +496,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnX);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -503,8 +506,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnY);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -514,8 +516,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnZ);
 				if (aux.getPalabraacertada()) {
-					activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-							btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+					activarBotonesLetras();
 				}
 
 			}
@@ -525,8 +526,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				FuncionesAhorcado newGame = new FuncionesAhorcado();
 				textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
-				activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-						btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+				activarBotonesLetras();
 
 				
 			}
@@ -536,8 +536,7 @@ public class Ahorcado extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				if (aux.getVidas() > 1) {
 				aux.resolver();
-				activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-						btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
+				activarBotonesLetras();
 				
 				}
 				else {
@@ -554,7 +553,7 @@ public class Ahorcado extends JFrame {
 		boton1.setEnabled(false);
 		if (aux.ComprobarIntentos()) {
 			textField_PalabraSecreta.setText(aux.nuevaVida());
-			activarBotonesLetras(btnA, btnB, btnC);
+			activarBotonesLetras();
 			//activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
 			//		btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
 		}
@@ -563,11 +562,7 @@ public class Ahorcado extends JFrame {
 	
 
 	//Activa los botones de las letras.
-	private void activarBotonesLetras(JButton btnA, JButton btnB, JButton btnC, JButton btnD, JButton btnE,
-			JButton btnF, JButton btnG, JButton btnH, JButton btnI, JButton btnJ, JButton btnK, JButton btnL,
-			JButton btnM, JButton btnN, JButton btnNY, JButton btnO, JButton btnP, JButton btnQ, JButton btnR,
-			JButton btnS, JButton btnT, JButton btnU, JButton btnV, JButton btnW, JButton btnX, JButton btnY,
-			JButton btnZ) {
+	private void activarBotonesLetras() {
 		btnA.setEnabled(true);
 		btnB.setEnabled(true);
 		btnC.setEnabled(true);
