@@ -60,6 +60,9 @@ public class Ahorcado extends JFrame {
 	private JButton btnX = new JButton("X");
 	private JButton btnY = new JButton("Y");
 	private JButton btnZ = new JButton("Z");
+	
+	JToggleButton tglbtnNewToggleButton_1,tglbtnNewToggleButton_2,tglbtnNewToggleButton_3, tglbtnNewToggleButton_4,tglbtnNewToggleButton, tglbtnNewToggleButton_5;
+
 
 	/**
 	 * Launch the application.
@@ -103,29 +106,29 @@ public class Ahorcado extends JFrame {
 		btnResolver.setBounds(23, 68, 117, 25);
 		contentPane.add(btnResolver);
 
-		JToggleButton tglbtnNewToggleButton = new JToggleButton("");
+		tglbtnNewToggleButton = new JToggleButton("");
 		tglbtnNewToggleButton.setEnabled(false);
-		tglbtnNewToggleButton.setBounds(23, 158, 49, 35);
+		tglbtnNewToggleButton.setBounds(23, 158, 50, 50);
 		contentPane.add(tglbtnNewToggleButton);
 
-		JToggleButton tglbtnNewToggleButton_1 = new JToggleButton("");
+		tglbtnNewToggleButton_1 = new JToggleButton("");
 		tglbtnNewToggleButton_1.setEnabled(false);
-		tglbtnNewToggleButton_1.setBounds(77, 158, 49, 35);
+		tglbtnNewToggleButton_1.setBounds(77, 158, 50, 50);
 		contentPane.add(tglbtnNewToggleButton_1);
 
-		JToggleButton tglbtnNewToggleButton_2 = new JToggleButton("");
+		tglbtnNewToggleButton_2 = new JToggleButton("");
 		tglbtnNewToggleButton_2.setEnabled(false);
-		tglbtnNewToggleButton_2.setBounds(132, 158, 49, 35);
+		tglbtnNewToggleButton_2.setBounds(132, 158, 50, 50);
 		contentPane.add(tglbtnNewToggleButton_2);
 
-		JToggleButton tglbtnNewToggleButton_3 = new JToggleButton("");
+		tglbtnNewToggleButton_3 = new JToggleButton("");
 		tglbtnNewToggleButton_3.setEnabled(false);
-		tglbtnNewToggleButton_3.setBounds(187, 158, 49, 35);
+		tglbtnNewToggleButton_3.setBounds(187, 158, 50, 50);
 		contentPane.add(tglbtnNewToggleButton_3);
 
-		JToggleButton tglbtnNewToggleButton_4 = new JToggleButton("");
+		tglbtnNewToggleButton_4 = new JToggleButton("");
 		tglbtnNewToggleButton_4.setEnabled(false);
-		tglbtnNewToggleButton_4.setBounds(248, 158, 49, 35);
+		tglbtnNewToggleButton_4.setBounds(247, 158, 50, 50);
 		contentPane.add(tglbtnNewToggleButton_4);
 
 		JLabel lblPalabraSecreta = new JLabel("Palabra Secreta");
@@ -250,7 +253,7 @@ public class Ahorcado extends JFrame {
 		contentPane.add(btnZ);
 		btnZ.setEnabled(false);
 
-		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("");
+		tglbtnNewToggleButton_5 = new JToggleButton("");
 		tglbtnNewToggleButton_5.setEnabled(false);
 		tglbtnNewToggleButton_5.setBounds(384, 31, 343, 516);
 		contentPane.add(tglbtnNewToggleButton_5);
@@ -258,12 +261,22 @@ public class Ahorcado extends JFrame {
 		
 		
 		tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/ImagenInicial.png"))));
-		//tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("../Leon.png"))));
+		tglbtnNewToggleButton.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+		tglbtnNewToggleButton_1.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+		tglbtnNewToggleButton_2.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+		tglbtnNewToggleButton_3.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+		tglbtnNewToggleButton_4.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+
 
 
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnA);
+				try {
+					accionBoton(btnA);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -274,7 +287,12 @@ public class Ahorcado extends JFrame {
 		btnB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println(aux.getPalabraSec());
-				accionBoton(btnB);
+				try {
+					accionBoton(btnB);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -284,7 +302,12 @@ public class Ahorcado extends JFrame {
 
 		btnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnC);
+				try {
+					accionBoton(btnC);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -294,7 +317,12 @@ public class Ahorcado extends JFrame {
 
 		btnD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnD);
+				try {
+					accionBoton(btnD);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -304,7 +332,12 @@ public class Ahorcado extends JFrame {
 
 		btnE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnE);
+				try {
+					accionBoton(btnE);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -314,7 +347,12 @@ public class Ahorcado extends JFrame {
 
 		btnF.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnF);
+				try {
+					accionBoton(btnF);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -324,7 +362,12 @@ public class Ahorcado extends JFrame {
 
 		btnG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnG);
+				try {
+					accionBoton(btnG);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -334,7 +377,12 @@ public class Ahorcado extends JFrame {
 
 		btnH.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnH);
+				try {
+					accionBoton(btnH);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -344,7 +392,12 @@ public class Ahorcado extends JFrame {
 
 		btnI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnI);
+				try {
+					accionBoton(btnI);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -354,7 +407,12 @@ public class Ahorcado extends JFrame {
 
 		btnJ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnJ);
+				try {
+					accionBoton(btnJ);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -364,7 +422,12 @@ public class Ahorcado extends JFrame {
 
 		btnK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnK);
+				try {
+					accionBoton(btnK);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -374,7 +437,12 @@ public class Ahorcado extends JFrame {
 
 		btnL.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnL);
+				try {
+					accionBoton(btnL);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -384,7 +452,12 @@ public class Ahorcado extends JFrame {
 
 		btnM.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnM);
+				try {
+					accionBoton(btnM);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -394,7 +467,12 @@ public class Ahorcado extends JFrame {
 
 		btnN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnN);
+				try {
+					accionBoton(btnN);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -404,7 +482,12 @@ public class Ahorcado extends JFrame {
 
 		btnNY.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnNY);
+				try {
+					accionBoton(btnNY);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -414,7 +497,12 @@ public class Ahorcado extends JFrame {
 
 		btnO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnO);
+				try {
+					accionBoton(btnO);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -424,7 +512,12 @@ public class Ahorcado extends JFrame {
 
 		btnP.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnP);
+				try {
+					accionBoton(btnP);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -434,7 +527,12 @@ public class Ahorcado extends JFrame {
 
 		btnQ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnQ);
+				try {
+					accionBoton(btnQ);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -444,7 +542,12 @@ public class Ahorcado extends JFrame {
 
 		btnR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnR);
+				try {
+					accionBoton(btnR);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -454,7 +557,12 @@ public class Ahorcado extends JFrame {
 
 		btnS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnS);
+				try {
+					accionBoton(btnS);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -464,7 +572,12 @@ public class Ahorcado extends JFrame {
 
 		btnT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnT);
+				try {
+					accionBoton(btnT);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -474,7 +587,12 @@ public class Ahorcado extends JFrame {
 
 		btnU.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnU);
+				try {
+					accionBoton(btnU);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -484,7 +602,12 @@ public class Ahorcado extends JFrame {
 
 		btnV.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnV);
+				try {
+					accionBoton(btnV);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -494,7 +617,12 @@ public class Ahorcado extends JFrame {
 
 		btnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnW);
+				try {
+					accionBoton(btnW);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -504,7 +632,12 @@ public class Ahorcado extends JFrame {
 
 		btnX.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnX);
+				try {
+					accionBoton(btnX);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -514,7 +647,12 @@ public class Ahorcado extends JFrame {
 
 		btnY.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnY);
+				try {
+					accionBoton(btnY);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -524,7 +662,12 @@ public class Ahorcado extends JFrame {
 
 		btnZ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionBoton(btnZ);
+				try {
+					accionBoton(btnZ);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (aux.getPalabraacertada()) {
 					activarBotonesLetras();
 				}
@@ -548,6 +691,7 @@ public class Ahorcado extends JFrame {
 					aux.damepista(textField_PalabraSecreta.getText());
 					btnResolver.setEnabled(false);
 					aux.quitaVida();
+					
 				} else {
 					JOptionPane.showMessageDialog(null, "No te quedan vidas");
 				}
@@ -557,7 +701,7 @@ public class Ahorcado extends JFrame {
 	}
 
 	// Cada vez que pulsamos una letra
-	public void accionBoton(JButton boton1) {
+	public void accionBoton(JButton boton1) throws IOException {
 		// Actualizamos el Label con la palabra codificada H*L*
 		String nuevaPalabra = aux.contieneLetra(boton1.getText(), aux.getPalabraSec(),
 				textField_PalabraSecreta.getText());
@@ -565,17 +709,53 @@ public class Ahorcado extends JFrame {
 		boton1.setEnabled(false); // Desactivamos el botón para no volver a usar esa letra.
 
 		if (aux.ComprobarIntentos()) { // Si te quedas sin intentos Pone una nueva palabra.
-			textField_PalabraSecreta.setText(aux.nuevaVida()); //
+			textField_PalabraSecreta.setText(aux.nuevaVida()); 
 			if (aux.getVidas()==0) {
 				desactivarBotonesLetras();
 			}
 			else {
 				activarBotonesLetras();
 			}
-		} else if (aux.getVidas() < 1) {
+		}else if (aux.getPalabraacertada()) {
+			aux.nuevaPalabraSecreta();
+			textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
+			aux.setPalabraacertada(false);
+			activarBotonesLetras();
+		}
+		else if (aux.getVidas() < 1) {
 			JOptionPane.showMessageDialog(null, "Se acabaron las vidas");
 		}
-
+		actualizaBombillas();
+		
+	}
+	
+	private void actualizaBombillas() throws IOException{
+		switch (aux.getVidas()) {
+		case 4:
+			tglbtnNewToggleButton_4.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_muerte.png"))));
+			break;
+		case 3:
+			tglbtnNewToggleButton_3.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_muerte.png"))));
+			break;
+		case 2:
+			tglbtnNewToggleButton_2.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_muerte.png"))));
+			break;
+		case 1:
+			tglbtnNewToggleButton_1.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_muerte.png"))));
+			break;
+		case 0:
+			tglbtnNewToggleButton.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_muerte.png"))));
+			aux.mensajeFinPartida();
+			break;
+		default:
+			tglbtnNewToggleButton_4.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+			tglbtnNewToggleButton_3.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+			tglbtnNewToggleButton_2.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+			tglbtnNewToggleButton_1.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+			tglbtnNewToggleButton.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Bombilla_vida.png"))));
+			break;
+		}
+		tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource(aux.dameImagenAhorcado()))));
 	}
 
 	// Activa los botones de las letras.

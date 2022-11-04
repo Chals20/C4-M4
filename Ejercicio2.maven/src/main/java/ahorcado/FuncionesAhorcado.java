@@ -19,7 +19,7 @@ public class FuncionesAhorcado {
 		// generamos aleatoriamente la palabra a adivinar
 		int i = (int) Math.floor(Math.random() * (palabras.length));
 		this.palabraSec = palabras[i].toUpperCase();
-		this.vidas = 2;
+		this.vidas = 5;
 		this.intentos = 10;
 	}
 
@@ -77,7 +77,6 @@ public class FuncionesAhorcado {
 	public String contieneLetra(String letra, String palabraSecreta, String palabraLabel) {
 		String nuevaPalabraCodificada = "";
 		boolean contieneLetra = false;
-		boolean palabraresuelta = false;
 		for (int i = 0; i < palabraSecreta.length(); i++) {
 			// MANZANA Letra: M
 			// M ----- M_ ----- M__
@@ -92,15 +91,14 @@ public class FuncionesAhorcado {
 		}
 		if (!contieneLetra) {
 			this.intentos = (this.intentos - 1);
-
-			// cambiarImagenAhorcado()
-
 		}
 
 		if (!nuevaPalabraCodificada.contains("*")) { // Si la palbra del label NO contiene "*" Has ganado.
 			System.out.println("Palabra completada");
 			this.intentos = 10;
 			this.palabraacertada = true;
+			JOptionPane.showMessageDialog(null, "Palabra acertada!!!: " + getPalabraSec());
+			setPalabraacertada(true);
 			// Set Imagen ahorcado a la primera
 			// nueva palabraSecreta
 			// Botones enable
@@ -127,14 +125,11 @@ public class FuncionesAhorcado {
 	}
 
 	public String nuevaVida() {
-		JOptionPane.showMessageDialog(null, "Se acabaron los intentos");
+		JOptionPane.showMessageDialog(null, "Se acabaron los intentos\n La palabra secreta era: " + getPalabraSec());
 		quitaVida();
-		System.out.println("La palabra secreta era: " + getPalabraSec());
 		nuevaPalabraSecreta();
 		setIntentos(10);
-		System.out.println("La palabra secreta nueva es: " + getPalabraSec());
 		return iniciarLabelSecreta();
-
 	}
 
 	public void resolver() {
@@ -158,6 +153,46 @@ public class FuncionesAhorcado {
 				return;
 			}
 		} 
+	}
+
+	public String dameImagenAhorcado() {
+		int intentos = getIntentos();
+		switch (intentos) {
+		case 10:
+			return "/ImagenInicial.png";
+		case 9:
+			return "/Imagen1.png";
+		case 8:
+			return "/Imagen2.png";
+		case 7:
+			return "/Imagen3.png";
+		case 6:
+			return "/Imagen4.png";
+		case 5:
+			return "/Imagen5.png";
+		case 4:
+			return "/Imagen6.png";
+		case 3:
+			return "/Imagen7.png";
+		case 2:
+			return "/Imagen8.png";
+		case 1:
+			return "/Imagen9.png";
+		case 0:
+			return "/Imagen10.png";
+		default:
+			break;
+		}
+		return null;
+	}
+
+	public String dameImagenVidas() {
+		//Bombilla_vida // Bombilla_Muerte
+		return null;
+	}
+
+	public void mensajeFinPartida() {
+		JOptionPane.showMessageDialog(null, "Fin de la partida!\n Has acertado un total de: " +contadorPalabrasAcertadas + " palabras.\n");
 	}
 
 }
