@@ -254,7 +254,17 @@ public class Ahorcado extends JFrame {
 		tglbtnNewToggleButton_5.setEnabled(false);
 		tglbtnNewToggleButton_5.setBounds(384, 31, 343, 516);
 		contentPane.add(tglbtnNewToggleButton_5);
+<<<<<<< HEAD
 
+=======
+		
+		
+		tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/ImagenInicial.png"))));
+		//tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("../Leon.png"))));
+
+		
+		
+>>>>>>> refs/remotes/origin/ft3-Imagenes
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				accionBoton(btnA);
