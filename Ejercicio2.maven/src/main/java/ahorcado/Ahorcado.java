@@ -22,13 +22,17 @@ import javax.swing.JToggleButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Ahorcado extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_PalabraSecreta;
 	FuncionesAhorcado aux = new FuncionesAhorcado();
-	
+	FuncionesAhorcado newGame;
+
+	private JButton btnResolver;
 	private JButton btnA = new JButton("A");
 	private JButton btnB = new JButton("B");
 	private JButton btnC = new JButton("C");
@@ -56,9 +60,6 @@ public class Ahorcado extends JFrame {
 	private JButton btnX = new JButton("X");
 	private JButton btnY = new JButton("Y");
 	private JButton btnZ = new JButton("Z");
-
-
-
 
 	/**
 	 * Launch the application.
@@ -98,27 +99,32 @@ public class Ahorcado extends JFrame {
 		btnIniciarJuego.setBounds(23, 31, 117, 25);
 		contentPane.add(btnIniciarJuego);
 
-		JButton btnResolver = new JButton("Resolver");
+		btnResolver = new JButton("Resolver");
 		btnResolver.setBounds(23, 68, 117, 25);
 		contentPane.add(btnResolver);
 
 		JToggleButton tglbtnNewToggleButton = new JToggleButton("");
+		tglbtnNewToggleButton.setEnabled(false);
 		tglbtnNewToggleButton.setBounds(23, 158, 49, 35);
 		contentPane.add(tglbtnNewToggleButton);
 
 		JToggleButton tglbtnNewToggleButton_1 = new JToggleButton("");
+		tglbtnNewToggleButton_1.setEnabled(false);
 		tglbtnNewToggleButton_1.setBounds(77, 158, 49, 35);
 		contentPane.add(tglbtnNewToggleButton_1);
 
 		JToggleButton tglbtnNewToggleButton_2 = new JToggleButton("");
+		tglbtnNewToggleButton_2.setEnabled(false);
 		tglbtnNewToggleButton_2.setBounds(132, 158, 49, 35);
 		contentPane.add(tglbtnNewToggleButton_2);
 
 		JToggleButton tglbtnNewToggleButton_3 = new JToggleButton("");
+		tglbtnNewToggleButton_3.setEnabled(false);
 		tglbtnNewToggleButton_3.setBounds(187, 158, 49, 35);
 		contentPane.add(tglbtnNewToggleButton_3);
 
 		JToggleButton tglbtnNewToggleButton_4 = new JToggleButton("");
+		tglbtnNewToggleButton_4.setEnabled(false);
 		tglbtnNewToggleButton_4.setBounds(248, 158, 49, 35);
 		contentPane.add(tglbtnNewToggleButton_4);
 
@@ -135,12 +141,11 @@ public class Ahorcado extends JFrame {
 		JLabel lblTeclado = new JLabel("Teclado");
 		lblTeclado.setBounds(23, 338, 70, 15);
 		contentPane.add(lblTeclado);
-		
 
 		btnA.setBounds(23, 365, 49, 35);
 		contentPane.add(btnA);
 		btnA.setEnabled(false);
-		
+
 		btnB.setBounds(77, 365, 49, 35);
 		contentPane.add(btnB);
 		btnB.setEnabled(false);
@@ -148,7 +153,7 @@ public class Ahorcado extends JFrame {
 		btnC.setBounds(132, 365, 49, 35);
 		contentPane.add(btnC);
 		btnC.setEnabled(false);
-	
+
 		btnD.setBounds(193, 365, 49, 35);
 		contentPane.add(btnD);
 		btnD.setEnabled(false);
@@ -197,7 +202,7 @@ public class Ahorcado extends JFrame {
 		contentPane.add(btnNY);
 		btnNY.setEnabled(false);
 
-		btnO.setBounds(23, 465, 49, 35);
+		btnO.setBounds(23, 470, 49, 35);
 		contentPane.add(btnO);
 		btnO.setEnabled(false);
 
@@ -244,7 +249,6 @@ public class Ahorcado extends JFrame {
 		btnZ.setBounds(77, 559, 49, 35);
 		contentPane.add(btnZ);
 		btnZ.setEnabled(false);
-
 
 		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("");
 		tglbtnNewToggleButton_5.setEnabled(false);
@@ -521,47 +525,54 @@ public class Ahorcado extends JFrame {
 
 			}
 		});
-		
+
 		btnIniciarJuego.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				FuncionesAhorcado newGame = new FuncionesAhorcado();
+				newGame = new FuncionesAhorcado();
 				textField_PalabraSecreta.setText(aux.iniciarLabelSecreta());
 				activarBotonesLetras();
+				btnIniciarJuego.setEnabled(false);
 
-				
 			}
 		});
-		
+
 		btnResolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (aux.getVidas() > 1) {
-				aux.resolver();
-				activarBotonesLetras();
-				
-				}
-				else {
+					aux.damepista(textField_PalabraSecreta.getText());
+					btnResolver.setEnabled(false);
+					aux.quitaVida();
+				} else {
 					JOptionPane.showMessageDialog(null, "No te quedan vidas");
 				}
 			}
 		});
+
 	}
 
+	// Cada vez que pulsamos una letra
 	public void accionBoton(JButton boton1) {
+		// Actualizamos el Label con la palabra codificada H*L*
 		String nuevaPalabra = aux.contieneLetra(boton1.getText(), aux.getPalabraSec(),
 				textField_PalabraSecreta.getText());
 		textField_PalabraSecreta.setText(nuevaPalabra);
-		boton1.setEnabled(false);
-		if (aux.ComprobarIntentos()) {
-			textField_PalabraSecreta.setText(aux.nuevaVida());
-			activarBotonesLetras();
-			//activarBotonesLetras(btnA, btnB, btnC, btnD, btnE, btnF, btnG, btnH, btnI, btnJ, btnK, btnL, btnM,
-			//		btnN, btnNY, btnO, btnP, btnQ, btnR, btnS, btnT, btnU, btnV, btnW, btnX, btnY, btnZ);
-		}
-	}
-	
-	
+		boton1.setEnabled(false); // Desactivamos el botón para no volver a usar esa letra.
 
-	//Activa los botones de las letras.
+		if (aux.ComprobarIntentos()) { // Si te quedas sin intentos Pone una nueva palabra.
+			textField_PalabraSecreta.setText(aux.nuevaVida()); //
+			if (aux.getVidas()==0) {
+				desactivarBotonesLetras();
+			}
+			else {
+				activarBotonesLetras();
+			}
+		} else if (aux.getVidas() < 1) {
+			JOptionPane.showMessageDialog(null, "Se acabaron las vidas");
+		}
+
+	}
+
+	// Activa los botones de las letras.
 	private void activarBotonesLetras() {
 		btnA.setEnabled(true);
 		btnB.setEnabled(true);
@@ -590,6 +601,38 @@ public class Ahorcado extends JFrame {
 		btnX.setEnabled(true);
 		btnY.setEnabled(true);
 		btnZ.setEnabled(true);
+	}
+	
+	private void desactivarBotonesLetras() {
+		btnA.setEnabled(false);
+		btnB.setEnabled(false);
+		btnC.setEnabled(false);
+		btnD.setEnabled(false);
+		btnE.setEnabled(false);
+		btnF.setEnabled(false);
+		btnG.setEnabled(false);
+		btnH.setEnabled(false);
+		btnI.setEnabled(false);
+		btnJ.setEnabled(false);
+		btnK.setEnabled(false);
+		btnL.setEnabled(false);
+		btnM.setEnabled(false);
+		btnN.setEnabled(false);
+		btnNY.setEnabled(false);
+		btnO.setEnabled(false);
+		btnP.setEnabled(false);
+		btnQ.setEnabled(false);
+		btnR.setEnabled(false);
+		btnS.setEnabled(false);
+		btnT.setEnabled(false);
+		btnU.setEnabled(false);
+		btnV.setEnabled(false);
+		btnW.setEnabled(false);
+		btnX.setEnabled(false);
+		btnY.setEnabled(false);
+		btnZ.setEnabled(false);
+		btnResolver.setEnabled(false);
+		textField_PalabraSecreta.setText("");
 	}
 
 }

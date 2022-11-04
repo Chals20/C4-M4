@@ -1,5 +1,7 @@
 package ahorcado;
 
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
 
 public class FuncionesAhorcado {
@@ -17,7 +19,14 @@ public class FuncionesAhorcado {
 		// generamos aleatoriamente la palabra a adivinar
 		int i = (int) Math.floor(Math.random() * (palabras.length));
 		this.palabraSec = palabras[i].toUpperCase();
-		this.vidas = 5;
+		this.vidas = 2;
+		this.intentos = 10;
+	}
+
+	public void siguientePalabra() {
+		int i = (int) Math.floor(Math.random() * (palabras.length));
+		this.palabraSec = palabras[i].toUpperCase();
+		this.vidas = getVidas() - 1;
 		this.intentos = 10;
 	}
 
@@ -57,6 +66,10 @@ public class FuncionesAhorcado {
 
 	public String getPalabraSec() {
 		return palabraSec;
+	}
+
+	public int getContadorPalabrasAcertadas() {
+		return contadorPalabrasAcertadas;
 	}
 
 	// Recorre la palabra y comprara cada una de sus letras con la letra introducida
@@ -115,7 +128,7 @@ public class FuncionesAhorcado {
 
 	public String nuevaVida() {
 		JOptionPane.showMessageDialog(null, "Se acabaron los intentos");
-		setVidas(getVidas() - 1);
+		quitaVida();
 		System.out.println("La palabra secreta era: " + getPalabraSec());
 		nuevaPalabraSecreta();
 		setIntentos(10);
@@ -128,6 +141,23 @@ public class FuncionesAhorcado {
 		JOptionPane.showMessageDialog(null, "La palabra secreta era: " + getPalabraSec());
 		this.vidas = this.vidas - 1;
 		this.intentos = 10;
+
+		// Dar nueva palabra secreta
+	}
+	
+	//Quita una vida.
+	public void quitaVida() {
+		setVidas(getVidas()-1);
+	}
+
+	public void damepista(String palabraLabel) {
+		//getPalabraSec() ---> buscar primera letra no acertada.
+		for (int i = 0; i< palabraLabel.length(); i++) {
+			if (palabraLabel.charAt(i) == '*') {
+				JOptionPane.showMessageDialog(null, "La primera letra que te falta es la " + getPalabraSec().charAt(i));
+				return;
+			}
+		} 
 	}
 
 }
