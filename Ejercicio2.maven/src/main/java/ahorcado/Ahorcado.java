@@ -219,6 +219,10 @@ public class Ahorcado extends JFrame {
 		contentPane.add(tglbtnNewToggleButton_5);
 		
 		
+		tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("/Leon.png"))));
+		//tglbtnNewToggleButton_5.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("../Leon.png"))));
+
+		
 		
 		btnA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
